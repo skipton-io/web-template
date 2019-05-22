@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get dist-upgrade -y && \
     apt autoremove -y && \
     apt-get upgrade -y && \
-    apt-get install wget
+    apt-get install wget -y
 
 RUN wget https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-beta_current_amd64.deb && \
     dpkg -i mod-pagespeed-*.deb && \
