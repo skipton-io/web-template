@@ -5,3 +5,4 @@ RUN  curl -o /tmp/mod-pagespeed.deb  https://dl-ssl.google.com/dl/linux/direct/m
     && dpkg -i /tmp/mod-pagespeed.deb \
     && apt-get -f install
     
+RUN a2enmod headers
