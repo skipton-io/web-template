@@ -13,5 +13,6 @@ RUN wget https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_
     
 WORKDIR /tmp
 COPY entrypoint.sh .
-
 ENTRYPOINT /tmp/entrypoint.sh
+RUN ["chmod", "+x", "/tmp/entrypoint.sh"]
+
