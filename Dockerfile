@@ -8,5 +8,5 @@ RUN  curl -o /tmp/mod-pagespeed.deb  https://dl-ssl.google.com/dl/linux/direct/m
 RUN a2enmod headers
 
 # VHOST(S)
-COPY --chown=deployuser:deploygroup .vhost.tpl /var/www/
+COPY .vhost.tpl /var/www/
 RUN cp /var/www/.vhost.tpl /etc/apache2/sites-enabled/000-default.conf
