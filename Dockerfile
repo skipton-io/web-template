@@ -16,5 +16,5 @@ COPY entrypoint.sh .
 ENTRYPOINT /tmp/entrypoint.sh
 RUN ["chmod", "+x", "/tmp/entrypoint.sh"]
 
-
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+EXPOSE 80
+CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
