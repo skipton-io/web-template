@@ -11,7 +11,3 @@ RUN wget https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_
     dpkg -i mod-pagespeed-*.deb && \
     apt-get -f install
     
-WORKDIR /var/www
-COPY entrypoint.sh /var/www/
-RUN ["chmod", "+x", "/var/www/entrypoint.sh"]
-ENTRYPOINT /var/www/entrypoint.sh
