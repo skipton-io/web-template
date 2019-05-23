@@ -1,4 +1,4 @@
-FROM httpd:2.4
+FROM php:apache
 
 RUN apt-get update && \
     apt-get install apt-utils -y && \
