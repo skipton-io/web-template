@@ -23,4 +23,8 @@
     Header always set Referrer-Policy "no-referrer-when-downgrade"
     Header always set Content-Security-Policy "default-src 'self'"
     Header always set X-Content-Security-Policy "default-src 'self'"
+    
+    ModPagespeed On
+    ModPagespeedEnableFilters combine_css,combine_javascript
+    ModPagespeedHonorCsp on
 </VirtualHost>
