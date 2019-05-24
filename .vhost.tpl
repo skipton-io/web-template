@@ -21,4 +21,6 @@
     Header always set X-Xss-Protection "1; mode=block"
     Header always set X-Content-Type-Options "nosniff"
     Header always set Referrer-Policy "no-referrer-when-downgrade"
+    Header always set Content-Security-Policy "default-src 'self'"
+    Header always set X-Content-Security-Policy "default-src 'self'"
 </VirtualHost>
