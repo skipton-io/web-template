@@ -21,8 +21,6 @@
     Header always set X-Xss-Protection "1; mode=block"
     Header always set X-Content-Type-Options "nosniff"
     Header always set Referrer-Policy "no-referrer-when-downgrade"
-    Header always set Content-Security-Policy "default-src *://www.skipton.one; style-src *://www.skipton.one fonts.googleapis.com s3.eu-west-2.amazonaws.com"
-    Header always set X-Content-Security-Policy "default-src *://www.skipton.one; style-src *://www.skipton.one fonts.googleapis.com s3.eu-west-2.amazonaws.com"
     
     ModPagespeed On
     ModPagespeedEnableFilters combine_css,combine_javascript
