@@ -2,7 +2,10 @@
     DocumentRoot /var/www/html
     
     ModPagespeedMapRewriteDomain https://www.skipton.one www.skipton.one
-   
+    ModPagespeedFileCachePath            "/var/www/html/cache/pagespeed"
+    ModPagespeedFileCacheSizeKb          102400
+    ModPagespeedFileCacheCleanIntervalMs 3600000
+    ModPagespeedFileCacheInodeLimit      500000
     <Directory /var/www/html>
         AllowOverride None
         Order Allow,Deny
@@ -20,10 +23,7 @@
         ModPagespeedDomain https://www.skipton.one
         AddOutputFilterByType MOD_PAGESPEED_OUTPUT_FILTER text/html
         ModPagespeedEnableFilters combine_javascript,extend_cache,resize_rendered_image_dimensions,responsive_images,trim_urls
-        ModPagespeedFileCachePath            "/var/www/html/cache/pagespeed"
-        ModPagespeedFileCacheSizeKb          102400
-        ModPagespeedFileCacheCleanIntervalMs 3600000
-        ModPagespeedFileCacheInodeLimit      500000
+        
      
     </Directory>
 
