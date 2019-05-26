@@ -1,28 +1,27 @@
 <VirtualHost *:80>
     DocumentRoot /var/www/html
-
-    <Directory /var/www/html>
-    AllowOverride None
-    Order Allow,Deny
-    Allow from All
     
-    <IfModule mod_rewrite.c>
-        Options -MultiViews
-        RewriteEngine On
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteRule ^(.*)$ index.php [QSA,L]
-    </IfModule>
+    ModPagespeedMapRewriteDomain d184e6uj31eqpt.cloudfront.net www.skipton.one
+    <Directory /var/www/html>
+        AllowOverride None
+        Order Allow,Deny
+        Allow from All
+
+        Header always set X-Frame-Options "DENY"
+        Header always set X-Xss-Protection "1; mode=block"
+        Header always set X-Content-Type-Options "nosniff"
+        Header always set Referrer-Policy "no-referrer-when-downgrade"
+
+        ModPagespeed On
+        ModPagespeedAllow all
+        ModPagespeedEnableFilters rewrite_domains
+        ModPagespeedDomain www.skipton.one
+        ModPagespeedDomain d184e6uj31eqpt.cloudfront.net
+        AddOutputFilterByType MOD_PAGESPEED_OUTPUT_FILTER text/html
+        ModPagespeedEnableFilters combine_javascript,extend_cache,resize_rendered_image_dimensions,responsive_images,trim_urls
     </Directory>
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
     
-    Header always set X-Frame-Options "DENY"
-    Header always set X-Xss-Protection "1; mode=block"
-    Header always set X-Content-Type-Options "nosniff"
-    Header always set Referrer-Policy "no-referrer-when-downgrade"
-    
-    ModPagespeed On
-    ModPagespeedEnableFilters combine_css,combine_javascript
-    ModPagespeedHonorCsp on
 </VirtualHost>
