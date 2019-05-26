@@ -1,7 +1,7 @@
 <VirtualHost *:80>
     DocumentRoot /var/www/html
     
-    ModPagespeedMapRewriteDomain https://d184e6uj31eqpt.cloudfront.net www.skipton.one
+    ModPagespeedMapRewriteDomain https://www.skipton.one www.skipton.one
    
     <Directory /var/www/html>
         AllowOverride None
@@ -17,7 +17,7 @@
         ModPagespeedAllow all
         ModPagespeedEnableFilters rewrite_domains
         ModPagespeedDomain www.skipton.one
-        ModPagespeedDomain https://d184e6uj31eqpt.cloudfront.net
+        ModPagespeedDomain https://www.skipton.one
         AddOutputFilterByType MOD_PAGESPEED_OUTPUT_FILTER text/html
         ModPagespeedEnableFilters combine_javascript,extend_cache,resize_rendered_image_dimensions,responsive_images,trim_urls
         ModPagespeedFileCachePath            "/var/www/html/cache/pagespeed"
