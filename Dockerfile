@@ -10,3 +10,4 @@ RUN a2enmod headers
 # VHOST(S)
 COPY .vhost.tpl /var/www/
 RUN cp /var/www/.vhost.tpl /etc/apache2/sites-enabled/000-default.conf
+RUN apache2ctl configtest
