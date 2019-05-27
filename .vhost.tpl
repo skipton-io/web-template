@@ -22,7 +22,7 @@
         #ModPagespeedDomain http://www.skipton.one
         #ModPagespeedDomain https://www.skipton.one
         AddOutputFilterByType MOD_PAGESPEED_OUTPUT_FILTER text/html
-        ModPagespeedEnableFilters combine_javascript,extend_cache,resize_rendered_image_dimensions,responsive_images,trim_url
+        ModPagespeedEnableFilters combine_javascript,extend_cache,resize_rendered_image_dimensions,responsive_images
     
     </Directory>
 
