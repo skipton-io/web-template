@@ -15,3 +15,5 @@ RUN cp /var/www/.vhost.tpl /etc/apache2/sites-enabled/000-default.conf
 RUN apache2ctl configtest
 
 WORKDIR /var/www
+
+RUN chown www-data:www-data /var/www/cache/pagespeed -R
