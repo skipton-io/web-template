@@ -1,11 +1,12 @@
 <VirtualHost *:80>
     DocumentRoot /var/www/html
     
-    ModPagespeedHonorCsp                 on
-    ModPagespeedFileCachePath            "/var/www/cache/pagespeed"
-    ModPagespeedFileCacheSizeKb          102400
-    ModPagespeedFileCacheCleanIntervalMs 3600000
-    ModPagespeedFileCacheInodeLimit      500000
+    ModPagespeedHonorCsp                    on
+    ModPagespeedCriticalImagesBeaconEnabled false
+    ModPagespeedFileCachePath               "/var/www/cache/pagespeed"
+    ModPagespeedFileCacheSizeKb             102400
+    ModPagespeedFileCacheCleanIntervalMs    3600000
+    ModPagespeedFileCacheInodeLimit         500000
     
     <Directory /var/www/html>
         AllowOverride None
