@@ -23,9 +23,11 @@
         ModPagespeed On
         ModPagespeedAllow all
         AddOutputFilterByType MOD_PAGESPEED_OUTPUT_FILTER text/html
-        ModPagespeedEnableFilters resize_rendered_image_dimensions,responsive_images
+        ModPagespeedEnableFilters resize_rendered_image_dimensions,responsive_images,resize_mobile_images,inline_preview_images,collapse_whitespace,resize_rendered_image_dimensions,rewrite_images,outline_javascript
+
     
     </Directory>
+
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
