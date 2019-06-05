@@ -19,6 +19,7 @@
         Header always set X-Content-Security-Policy "default-src 'none'; script-src 'self'; font-src 'self' fonts.gstatic.com fonts.googleapis.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self'; connect-src 'self'"
 
         ModPagespeed On
+        ModPagespeedHonorCsp on
         ModPagespeedAllow all
         AddOutputFilterByType MOD_PAGESPEED_OUTPUT_FILTER text/html
         ModPagespeedEnableFilters resize_rendered_image_dimensions,responsive_images
