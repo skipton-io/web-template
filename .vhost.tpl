@@ -2,7 +2,7 @@
     DocumentRoot /var/www/html
     
     ModPagespeedHonorCsp                    on
-    ModPagespeedCriticalImagesBeaconEnabled false
+    ModPagespeedCriticalImagesBeaconEnabled true
     ModPagespeedFileCachePath               "/var/www/cache/pagespeed"
     ModPagespeedFileCacheSizeKb             102400
     ModPagespeedFileCacheCleanIntervalMs    3600000
@@ -17,8 +17,8 @@
         Header always set X-Xss-Protection "1; mode=block"
         Header always set X-Content-Type-Options "nosniff"
         Header always set Referrer-Policy "no-referrer-when-downgrade"
-        Header always set Content-Security-Policy "default-src 'none'; script-src 'self'; font-src 'self' fonts.gstatic.com fonts.googleapis.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self'; connect-src 'self'"
-        Header always set X-Content-Security-Policy "default-src 'none'; script-src 'self'; font-src 'self' fonts.gstatic.com fonts.googleapis.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self'; connect-src 'self'"
+        Header always set Content-Security-Policy "default-src 'none'; script-src 'self' 'unsafe-inline'; font-src 'self' fonts.gstatic.com fonts.googleapis.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self'; connect-src 'self'"
+        Header always set X-Content-Security-Policy "default-src 'none'; script-src 'self' 'unsafe-inline'; font-src 'self' fonts.gstatic.com fonts.googleapis.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self'; connect-src 'self'"
 
         ModPagespeed On
         ModPagespeedAllow all
