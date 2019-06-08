@@ -7,7 +7,8 @@
     ModPagespeedFileCacheSizeKb             102400
     ModPagespeedFileCacheCleanIntervalMs    3600000
     ModPagespeedFileCacheInodeLimit         500000
-    
+    ModPagespeedInPlaceResourceOptimization on
+
     <Directory /var/www/html>
         AllowOverride None
         Order Allow,Deny
@@ -23,7 +24,7 @@
         ModPagespeed On
         ModPagespeedAllow all
         AddOutputFilterByType MOD_PAGESPEED_OUTPUT_FILTER text/html
-        ModPagespeedEnableFilters resize_rendered_image_dimensions,responsive_images,resize_mobile_images,inline_preview_images,collapse_whitespace,resize_rendered_image_dimensions,rewrite_images,outline_javascript,trim_urls
+        ModPagespeedEnableFilters resize_rendered_image_dimensions,responsive_images,resize_mobile_images,inline_preview_images,collapse_whitespace,resize_rendered_image_dimensions,rewrite_images,outline_javascript,trim_urls,combine_css,combine_javascript,defer_javascript,rewrite_css,rewrite_style_attributes_with_url,rewrite_style_attributes,fallback_rewrite_css_urls
 
     
     </Directory>
