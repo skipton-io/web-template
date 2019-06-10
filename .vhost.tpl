@@ -8,6 +8,8 @@
     ModPagespeedFileCacheCleanIntervalMs    3600000
     ModPagespeedFileCacheInodeLimit         500000
     ModPagespeedInPlaceResourceOptimization on
+    ModPagespeedCssOutlineMinBytes          1
+    ModPagespeedJsOutlineMinBytes           1
 
     <Directory /var/www/html>
         AllowOverride None
