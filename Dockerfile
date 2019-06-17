@@ -4,6 +4,7 @@ VOLUME /var/www/cache/pagespeed
 
 WORKDIR /tmp
 
+ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 RUN apt update \
     && apt install -y gnupg2
     
