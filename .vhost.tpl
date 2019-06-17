@@ -27,7 +27,7 @@
         ModPagespeed On
         ModPagespeedAllow all
         AddOutputFilterByType MOD_PAGESPEED_OUTPUT_FILTER text/html
-        ModPagespeedEnableFilters rewrite_images,responsive_images,resize_mobile_images,inline_preview_images,collapse_whitespace,outline_javascript,outline_css,trim_urls,rewrite_css,rewrite_style_attributes_with_url,rewrite_style_attributes,fallback_rewrite_css_urls
+        ModPagespeedEnableFilters rewrite_images,responsive_images,resize_mobile_images,inline_preview_images,outline_javascript,outline_css,rewrite_css,rewrite_style_attributes_with_url,rewrite_style_attributes,fallback_rewrite_css_urls
 
     
     </Directory>
