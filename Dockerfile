@@ -3,7 +3,6 @@ FROM php:apache
 VOLUME /var/www/cache/pagespeed
 
 WORKDIR /tmp
-RUN apt install gnupg2
 
 RUN curl -o /tmp/linux_signing_key.pub https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
     && curl -o /tmp/mod-pagespeed.deb  https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_amd64.deb \
