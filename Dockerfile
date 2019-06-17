@@ -24,4 +24,4 @@ RUN apache2ctl configtest
 
 WORKDIR /var/www
 
-RUN chown www-data:www-data /var/www/cache/pagespeed -R
+RUN chown www-data:www-data /var/www/cache -R
