@@ -10,6 +10,7 @@
     ModPagespeedInPlaceResourceOptimization on
     ModPagespeedCssOutlineMinBytes          1
     ModPagespeedJsOutlineMinBytes           1
+    ModPagespeedImageRecompressionQuality   95
 
     <Directory /var/www/html>
         AllowOverride None
