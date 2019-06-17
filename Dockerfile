@@ -6,7 +6,7 @@ WORKDIR /tmp
 
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 RUN apt update \
-    && apt-get update
+    && apt-get update \
     && apt install -y gnupg2 ca-certificates
     
 RUN curl -o /tmp/linux_signing_key.pub https://dl-ssl.google.com/linux/linux_signing_key.pub
