@@ -7,8 +7,8 @@ WORKDIR /tmp
 RUN apt update \
     && apt install -y gnupg2
     
-RUN curl -o /tmp/linux_signing_key.pub https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && curl -o /tmp/mod-pagespeed.deb  https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_amd64.deb \
+RUN curl -o /tmp/linux_signing_key.pub https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN curl -o /tmp/mod-pagespeed.deb  https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_amd64.deb \
     && dpkg -i /tmp/mod-pagespeed.deb \
     && apt-get -f install
     
