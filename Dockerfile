@@ -24,4 +24,4 @@ RUN apache2ctl configtest
 
 WORKDIR /var/www
 
-RUN chown www-data:www-data /var/www/cache -R
+RUN chmod 0777 /var/www/cache -R
