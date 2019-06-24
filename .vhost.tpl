@@ -5,7 +5,7 @@
     ModPagespeedCriticalImagesBeaconEnabled true
     ModPagespeedFileCachePath               "/var/www/cache/pagespeed"
     ModPagespeedFileCacheSizeKb             102400
-    ModPagespeedFileCacheCleanIntervalMs    3600000
+    ModPagespeedFileCacheCleanIntervalMs    -1
     ModPagespeedFileCacheInodeLimit         500000
     ModPagespeedInPlaceResourceOptimization on
     ModPagespeedCssOutlineMinBytes          1
