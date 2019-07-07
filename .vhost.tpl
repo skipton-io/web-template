@@ -1,16 +1,17 @@
 <VirtualHost *:80>
     DocumentRoot /var/www/html
     
-    ModPagespeedHonorCsp                    on
-    ModPagespeedCriticalImagesBeaconEnabled true
-    ModPagespeedFileCachePath               "/var/www/cache/pagespeed"
-    ModPagespeedFileCacheSizeKb             102400
-    ModPagespeedFileCacheCleanIntervalMs    1576800000000
-    ModPagespeedFileCacheInodeLimit         500000
-    ModPagespeedInPlaceResourceOptimization on
-    ModPagespeedCssOutlineMinBytes          1
-    ModPagespeedJsOutlineMinBytes           1
-    ModPagespeedImageRecompressionQuality   95
+    ModPagespeedHonorCsp                        on
+    ModPagespeedCriticalImagesBeaconEnabled     true
+    ModPagespeedFileCachePath                   "/var/www/cache/pagespeed"
+    ModPagespeedCreateSharedMemoryMetadataCache "/var/www/cache/pagespeed/" 51200
+    ModPagespeedFileCacheSizeKb                 102400
+    ModPagespeedFileCacheCleanIntervalMs        1576800000000
+    ModPagespeedFileCacheInodeLimit             500000
+    ModPagespeedInPlaceResourceOptimization     on
+    ModPagespeedCssOutlineMinBytes              1
+    ModPagespeedJsOutlineMinBytes               1
+    ModPagespeedImageRecompressionQuality       95
 
 
     <Directory /var/www/html>
