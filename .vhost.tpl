@@ -1,10 +1,10 @@
+ModPagespeedCreateSharedMemoryMetadataCache "/var/www/cache/pagespeed/" 51200
 <VirtualHost *:80>
     DocumentRoot /var/www/html
     
     ModPagespeedHonorCsp                        on
     ModPagespeedCriticalImagesBeaconEnabled     true
-    ModPagespeedFileCachePath                   "/var/www/cache/pagespeed"
-    ModPagespeedCreateSharedMemoryMetadataCache "/var/www/cache/pagespeed/" 51200
+    ModPagespeedFileCachePath                   "/var/www/cache/pagespeed/"
     ModPagespeedFileCacheSizeKb                 102400
     ModPagespeedFileCacheCleanIntervalMs        1576800000000
     ModPagespeedFileCacheInodeLimit             500000
